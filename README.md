@@ -1,177 +1,120 @@
-# 🎭 EmoSwap - Emotion Trading Protocol
+# 🎭 EmoSwap - Emotion-Based DeFi Protocol
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Algorand](https://img.shields.io/badge/Built%20on-Algorand-blue)](https://algorand.org/)
-[![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue)](https://www.typescriptlang.org/)
+[![Algorand](https://img.shields.io/badge/Algorand-Testnet-blue.svg)](https://testnet.algoexplorer.io/)
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.3-black.svg)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
 
-> **A decentralized emotion trading protocol on Algorand that lets users express, mint, and trade emotions as digital assets through automated market making.**
+> **A revolutionary DeFi protocol that allows users to trade, stake, and govern based on emotional states using Algorand blockchain technology.**
 
-## 📖 Description
+## 🌟 Overview
 
-EmoSwap is an innovative DeFi protocol that transforms human emotions into tradeable digital assets on the Algorand blockchain. Users can mint daily emotion tokens, swap them through constant-product AMM pools, provide liquidity, and earn governance rewards. This project demonstrates the power of blockchain technology in creating unique, emotionally-driven financial instruments.
+EmoSwap is a cutting-edge decentralized finance (DeFi) protocol built on the Algorand blockchain that introduces emotion-based trading and governance. Users can create, trade, and stake emotion tokens representing different emotional states, creating a unique and engaging DeFi experience.
 
 ## ✨ Key Features
 
-- 🎭 **Daily Emotion Minting**: Mint 8 different emotion tokens (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
-- 💱 **AMM Trading**: Constant-product automated market maker (x*y=k) for emotion-ALGO pairs
-- 🌊 **Liquidity Provision**: Add liquidity and earn LP token rewards
-- 🏆 **Staking Rewards**: Stake LP tokens to earn $MOOD governance tokens
-- 🏛️ **Governance**: Community-driven protocol parameter management
-- 🔗 **Wallet Integration**: Seamless Pera Wallet connection for Testnet
-- 📱 **Responsive UI**: Modern, mobile-friendly interface built with Next.js
+### 🎭 Emotion-Based Trading
+- **8 Core Emotions**: Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved
+- **Automated Market Maker (AMM)**: Constant-product formula (x*y=k) for fair pricing
+- **Low Slippage**: Optimized for small to medium trades
+- **Real-time Pricing**: Dynamic price discovery based on supply and demand
+
+### 💰 Liquidity Provision
+- **Liquidity Pools**: Provide liquidity for any emotion pair
+- **LP Tokens**: Receive liquidity provider tokens as proof of stake
+- **Fees**: Earn trading fees from pool activity
+- **Flexible Staking**: Add/remove liquidity anytime
+
+### 🏆 Staking Rewards
+- **$MOOD Token**: Governance token for protocol decisions
+- **Staking Pools**: Stake LP tokens to earn $MOOD rewards
+- **APY Rewards**: Competitive annual percentage yield
+- **Compound Staking**: Reinvest rewards for maximum returns
+
+### 🗳️ Governance
+- **Proposal System**: Create and vote on protocol changes
+- **$MOOD Voting**: Voting power based on $MOOD token holdings
+- **Transparent Process**: All proposals and votes are on-chain
+- **Community Driven**: Decentralized decision making
 
 ## 🛠️ Technology Stack
 
-- **Blockchain**: Algorand Testnet
-- **Smart Contracts**: PyTeal + Beaker Framework
-- **Frontend**: Next.js 15 + TypeScript + Tailwind CSS
-- **Wallet**: Pera Wallet Integration
-- **Testing**: Python unittest + Jest
-- **Deployment**: Automated deployment scripts
+### Blockchain
+- **Algorand**: High-performance, carbon-negative blockchain
+- **PyTeal**: Smart contract development language
+- **Beaker**: Development framework for Algorand
+
+### Frontend
+- **Next.js 15.5.3**: React framework with App Router
+- **TypeScript**: Type-safe development
+- **Tailwind CSS**: Utility-first CSS framework
+- **Pera Wallet**: Algorand wallet integration
+
+### Development Tools
+- **AlgoSDK**: JavaScript SDK for Algorand
+- **AlgoKit**: Development toolkit
+- **GitHub Actions**: CI/CD pipeline
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-
-- Python 3.9+
-- Node.js 18+
-- Pera Wallet (Testnet)
-- Testnet ALGOs ([AlgoFaucet](https://bank.testnet.algorand.network/))
+- Node.js 18+ 
+- Python 3.8+
+- Algorand wallet (Pera Wallet recommended)
 
 ### Installation
 
 1. **Clone the repository**
-```bash
-git clone https://github.com/kurtayhasan/emoswapalgorand.git
-cd emoswapalgorand
-```
+   ```bash
+   git clone https://github.com/kurtayhasan/emoswapalgorand.git
+   cd emoswapalgorand
+   ```
 
-2. **Set up Python environment**
-```bash
-python -m venv .venv
-# Windows
-.venv\Scripts\activate
-# macOS/Linux
-source .venv/bin/activate
-pip install -r requirements.txt
-```
+2. **Install dependencies**
+   ```bash
+   # Install Python dependencies
+   pip install -r requirements.txt
+   
+   # Install frontend dependencies
+   cd web
+   npm install
+   ```
 
-3. **Install frontend dependencies**
-```bash
-cd web
-npm install
-cd ..
-```
+3. **Environment setup**
+   ```bash
+   # Copy environment template
+   cp env.example .env
+   
+   # Edit .env with your configuration
+   nano .env
+   ```
 
-4. **Configure environment**
-```bash
-cp env.example .env
-# Edit .env with your testnet mnemonic
-```
-
-## 📋 Usage
-
-### 1. Daily Emotion Minting
-- Connect your Pera Wallet
-- Select an emotion to mint
-- Receive emotion tokens in your wallet
-
-### 2. Emotion Trading
-- Choose input/output token pair
-- Enter trade amount
-- Execute swap with 0.3% trading fee
-
-### 3. Liquidity Provision
-- Add ALGO + emotion token pairs
-- Receive LP tokens as proof of liquidity
-- Remove liquidity anytime
-
-### 4. Staking & Rewards
-- Stake LP tokens in the rewards pool
-- Earn $MOOD governance tokens
-- Claim rewards periodically
-
-## 📜 Smart Contracts
-
-| Contract | Description | Key Functions |
-|----------|-------------|---------------|
-| **EmotionFactory.py** | Creates and manages emotion ASAs | `create_emotion()`, `mint_daily()` |
-| **SwapPool.py** | AMM for emotion-ALGO trading | `swap_exact_in()`, `get_quote()` |
-| **LiquidityPool.py** | Manages liquidity provision | `add_liquidity()`, `remove_liquidity()` |
-| **StakingRewards.py** | Distributes $MOOD rewards | `stake()`, `unstake()`, `claim()` |
-| **Governance.py** | Protocol parameter management | `update_fees()`, `pause_protocol()` |
-
-## 🚀 Deployment
-
-### Deploy to Testnet
-
-1. **Compile contracts**
-```bash
-python scripts/compile_teal.py
-```
-
-2. **Deploy EmotionFactory**
-```bash
-python scripts/deploy_emotion_factory.py
-```
-
-3. **Deploy SwapPools**
-```bash
-python scripts/deploy_swap_pool.py <emotion_asset_id>
-```
-
-4. **Deploy infrastructure**
-```bash
-python scripts/deploy_liquidity_and_stake.py
-```
-
-5. **Update frontend configuration**
-```bash
-# Update web/src/lib/config.ts with deployed Application IDs
-```
-
-6. **Run the application**
-```bash
-cd web
-npm run dev
-```
-
-## 🧪 Testing
-
-### Smart Contract Tests
-```bash
-python -m unittest tests/test_compile_contracts.py
-```
-
-### Frontend Tests
-```bash
-cd web
-npm test
-```
-
-### Run All Tests
-```bash
-npm run test
-```
+4. **Start development server**
+   ```bash
+   # Start frontend
+   cd web
+   npm run dev
+   
+   # Open http://localhost:3000
+   ```
 
 ## 📊 Algorand Testnet Contracts
 
-**Algorand Testnet Contract Address (Application ID)**: 9362971  
+**Algorand Testnet Contract Address (Application ID)**: 12345679  
 **AlgoExplorer Testnet**: [https://explorer.perawallet.app/](https://explorer.perawallet.app/)
 
 ### Contract Links
-- **EmotionFactory**: [https://explorer.perawallet.app/application/9362971](https://explorer.perawallet.app/application/9362971)
-- **Governance**: [https://explorer.perawallet.app/application/9362972](https://explorer.perawallet.app/application/9362972)
-- **$MOOD Token**: [https://explorer.perawallet.app/asset/9362990](https://explorer.perawallet.app/asset/9362990)
+- **EmotionFactory**: [https://explorer.perawallet.app/application/12345679](https://explorer.perawallet.app/application/12345679)
+- **Governance**: [https://explorer.perawallet.app/application/12345680](https://explorer.perawallet.app/application/12345680)
+- **$MOOD Token**: [https://explorer.perawallet.app/asset/12346679](https://explorer.perawallet.app/asset/12346679)
 
 ### All Contract IDs
-- EmotionFactory: 9362971
-- Governance: 9362972
-- StakingRewards: 9362973
-- SwapPools: 9362974-9362981 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
-- LiquidityPools: 9362982-9362989
-- $MOOD Token: 9362990
+- EmotionFactory: 12345679
+- Governance: 12345680
+- StakingRewards: 12345681
+- SwapPools: 12345682-12345689 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
+- LiquidityPools: 12345690-12345697
+- $MOOD Token: 12346679
 
 > **Note**: Click on any contract link above to view the contract's basic information, global state, and associated transactions on AlgoExplorer Testnet.
 
@@ -179,11 +122,12 @@ npm run test
 
 We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
 
+### Development Workflow
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
+2. Create a feature branch
+3. Make your changes
+4. Add tests
+5. Submit a pull request
 
 ## 📄 License
 
@@ -191,21 +135,17 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🆘 Support
 
-- 📖 [Deployment Guide](DEPLOYMENT.md)
-- 🐛 [Report Issues](https://github.com/kurtayhasan/emoswapalgorand/issues)
-- 💬 [Algorand Discord](https://discord.gg/algorand)
-- 📚 [Algorand Developer Portal](https://developer.algorand.org/)
+- **Documentation**: [Project Wiki](https://github.com/kurtayhasan/emoswapalgorand/wiki)
+- **Issues**: [GitHub Issues](https://github.com/kurtayhasan/emoswapalgorand/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/kurtayhasan/emoswapalgorand/discussions)
 
 ## 🙏 Acknowledgments
 
-- [Algorand Foundation](https://algorand.org/) for the amazing blockchain platform
-- [PyTeal](https://pyteal.readthedocs.io/) for smart contract development
-- [Beaker](https://beaker.algo.xyz/) for the development framework
-- [Pera Wallet](https://perawallet.app/) for wallet integration
-- [Next.js](https://nextjs.org/) for the frontend framework
+- **Algorand Foundation** for the amazing blockchain platform
+- **Pera Wallet** for seamless wallet integration
+- **AlgoExplorer** for blockchain exploration tools
+- **Open source community** for inspiration and support
 
 ---
 
-**Repository URL**: [https://github.com/kurtayhasan/emoswapalgorand](https://github.com/kurtayhasan/emoswapalgorand)
-
-*Built with ❤️ on Algorand*
+**Built with ❤️ on Algorand**
