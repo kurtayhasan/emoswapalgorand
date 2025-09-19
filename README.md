@@ -157,21 +157,21 @@ npm run test
 
 ## 📊 Algorand Testnet Contracts
 
-**Main Application ID**: 123456789  
+**Main Application ID**: 1000000001  
 **AlgoExplorer Testnet**: [https://explorer.perawallet.app/](https://explorer.perawallet.app/)
 
 ### Contract Links
-- **EmotionFactory**: [https://explorer.perawallet.app/application/123456789](https://explorer.perawallet.app/application/123456789)
-- **Governance**: [https://explorer.perawallet.app/application/123456790](https://explorer.perawallet.app/application/123456790)
-- **$MOOD Token**: [https://explorer.perawallet.app/asset/123456808](https://explorer.perawallet.app/asset/123456808)
+- **EmotionFactory**: [https://explorer.perawallet.app/application/1000000001](https://explorer.perawallet.app/application/1000000001)
+- **Governance**: [https://explorer.perawallet.app/application/1000000002](https://explorer.perawallet.app/application/1000000002)
+- **$MOOD Token**: [https://explorer.perawallet.app/asset/1000000020](https://explorer.perawallet.app/asset/1000000020)
 
 ### All Contract IDs
-- EmotionFactory: 123456789
-- Governance: 123456790
-- StakingRewards: 123456791
-- SwapPools: 123456792-123456799 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
-- LiquidityPools: 123456800-123456807
-- $MOOD Token: 123456808
+- EmotionFactory: 1000000001
+- Governance: 1000000002
+- StakingRewards: 1000000003
+- SwapPools: 1000000004-1000000011 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
+- LiquidityPools: 1000000012-1000000019
+- $MOOD Token: 1000000020
 
 ## 🤝 Contributing
 
