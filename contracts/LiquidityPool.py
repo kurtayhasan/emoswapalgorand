@@ -6,6 +6,10 @@ Manages liquidity provision for emotion ASA <-> ALGO pairs
 from pyteal import *
 from beaker import *
 
+# Import decorators
+external = Application.external
+create = Application.create
+
 class LiquidityPoolState:
     asset_id = GlobalStateValue(
         stack_type=TealType.uint64,

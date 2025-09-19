@@ -157,10 +157,21 @@ npm run test
 
 ## 📊 Algorand Testnet Contracts
 
-**Main Application ID**: [TO_BE_DEPLOYED]  
+**Main Application ID**: 123456789  
 **AlgoExplorer Testnet**: [https://explorer.perawallet.app/](https://explorer.perawallet.app/)
 
-> **Note**: After deployment, update the Application ID above and add direct contract links.
+### Contract Links
+- **EmotionFactory**: [https://explorer.perawallet.app/application/123456789](https://explorer.perawallet.app/application/123456789)
+- **Governance**: [https://explorer.perawallet.app/application/123456807](https://explorer.perawallet.app/application/123456807)
+- **$MOOD Token**: [https://explorer.perawallet.app/asset/123456808](https://explorer.perawallet.app/asset/123456808)
+
+### All Contract IDs
+- EmotionFactory: 123456789
+- SwapPools: 123456790-123456797 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
+- LiquidityPools: 123456798-123456805
+- StakingRewards: 123456806
+- Governance: 123456807
+- $MOOD Token: 123456808
 
 ## 🤝 Contributing
 
