@@ -157,7 +157,7 @@ npm run test
 
 ## 📊 Algorand Testnet Contracts
 
-**Main Application ID**: 1000000001  
+**Algorand Testnet Contract Address (Application ID)**: 1000000001  
 **AlgoExplorer Testnet**: [https://explorer.perawallet.app/](https://explorer.perawallet.app/)
 
 ### Contract Links
@@ -172,6 +172,8 @@ npm run test
 - SwapPools: 1000000004-1000000011 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
 - LiquidityPools: 1000000012-1000000019
 - $MOOD Token: 1000000020
+
+> **Note**: Click on any contract link above to view the contract's basic information, global state, and associated transactions on AlgoExplorer Testnet.
 
 ## 🤝 Contributing
 
