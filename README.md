@@ -162,15 +162,15 @@ npm run test
 
 ### Contract Links
 - **EmotionFactory**: [https://explorer.perawallet.app/application/123456789](https://explorer.perawallet.app/application/123456789)
-- **Governance**: [https://explorer.perawallet.app/application/123456807](https://explorer.perawallet.app/application/123456807)
+- **Governance**: [https://explorer.perawallet.app/application/123456790](https://explorer.perawallet.app/application/123456790)
 - **$MOOD Token**: [https://explorer.perawallet.app/asset/123456808](https://explorer.perawallet.app/asset/123456808)
 
 ### All Contract IDs
 - EmotionFactory: 123456789
-- SwapPools: 123456790-123456797 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
-- LiquidityPools: 123456798-123456805
-- StakingRewards: 123456806
-- Governance: 123456807
+- Governance: 123456790
+- StakingRewards: 123456791
+- SwapPools: 123456792-123456799 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
+- LiquidityPools: 123456800-123456807
 - $MOOD Token: 123456808
 
 ## 🤝 Contributing

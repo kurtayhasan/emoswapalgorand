@@ -24,11 +24,11 @@ def deploy_simple_contract():
     params = client.suggested_params()
     
     # Create a simple approval program
-    approval_program = b"#pragma version 8\nint 1\nreturn"
-    clear_program = b"#pragma version 8\nint 1\nreturn"
+    approval_program = b"#pragma version 6\nint 1\nreturn"
+    clear_program = b"#pragma version 6\nint 1\nreturn"
     
     # Get sender address
-    private_key = mnemonic.to_private_key("boat dizzy tortoise forest scheme faculty legend task cabin expose jazz chalk sting curtain orbit canoe ethics safe extra unfold install follow type absorb ability")
+    private_key = mnemonic.to_private_key("scout logic sleep witness client skin exact bid story side garment pink endless disease movie forest reflect team grab elder rose repeat cherry above tooth")
     sender = account.address_from_private_key(private_key)
     
     # Create application

@@ -1,0 +1,25 @@
+{
+  "emotion_factory_id": 123456789,
+  "governance_id": 123456790,
+  "staking_rewards_id": 123456791,
+  "swap_pool_ids": {
+    "Happy": 123456792,
+    "Sad": 123456793,
+    "Angry": 123456794,
+    "Excited": 123456795,
+    "Calm": 123456796,
+    "Anxious": 123456797,
+    "Grateful": 123456798,
+    "Loved": 123456799
+  },
+  "liquidity_pool_ids": {
+    "Happy": 123456800,
+    "Sad": 123456801,
+    "Angry": 123456802,
+    "Excited": 123456803,
+    "Calm": 123456804,
+    "Anxious": 123456805,
+    "Grateful": 123456806,
+    "Loved": 123456807
+  }
+}
