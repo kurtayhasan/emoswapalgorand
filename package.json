@@ -1,0 +1,37 @@
+{
+  "name": "emoswapalgo",
+  "version": "1.0.0",
+  "description": "EmoSwap - Emotion-based DeFi Protocol on Algorand",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "pip install -r requirements.txt && cd web && npm install",
+    "dev": "cd web && npm run dev",
+    "build": "cd web && npm run build",
+    "test": "python -m unittest tests/test_compile_contracts.py && cd web && npm test",
+    "deploy:factory": "python scripts/deploy_emotion_factory.py",
+    "deploy:swap": "python scripts/deploy_swap_pool.py",
+    "deploy:liquidity": "python scripts/deploy_liquidity_and_stake.py",
+    "compile": "python scripts/compile_teal.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kurtayhasan/emoswapalgorand.git"
+  },
+  "keywords": [
+    "algorand",
+    "defi",
+    "emotion",
+    "trading",
+    "liquidity",
+    "staking",
+    "pyteal",
+    "nextjs",
+    "typescript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kurtayhasan/emoswapalgorand/issues"
+  },
+  "homepage": "https://github.com/kurtayhasan/emoswapalgorand#readme"
+}
