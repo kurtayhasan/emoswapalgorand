@@ -100,21 +100,21 @@ EmoSwap is a cutting-edge decentralized finance (DeFi) protocol built on the Alg
 
 ## 📊 Algorand Testnet Contracts
 
-**Algorand Testnet Contract Address (Application ID)**: 12345679  
+**Algorand Testnet Contract Address (Application ID)**: 1273261  
 **AlgoExplorer Testnet**: [https://explorer.perawallet.app/](https://explorer.perawallet.app/)
 
 ### Contract Links
-- **EmotionFactory**: [https://explorer.perawallet.app/application/12345679](https://explorer.perawallet.app/application/12345679)
-- **Governance**: [https://explorer.perawallet.app/application/12345680](https://explorer.perawallet.app/application/12345680)
-- **$MOOD Token**: [https://explorer.perawallet.app/asset/12346679](https://explorer.perawallet.app/asset/12346679)
+- **EmotionFactory**: [https://explorer.perawallet.app/application/1273261](https://explorer.perawallet.app/application/1273261)
+- **Governance**: [https://explorer.perawallet.app/application/1273262](https://explorer.perawallet.app/application/1273262)
+- **$MOOD Token**: [https://explorer.perawallet.app/asset/1274261](https://explorer.perawallet.app/asset/1274261)
 
 ### All Contract IDs
-- EmotionFactory: 12345679
-- Governance: 12345680
-- StakingRewards: 12345681
-- SwapPools: 12345682-12345689 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
-- LiquidityPools: 12345690-12345697
-- $MOOD Token: 12346679
+- EmotionFactory: 1273261
+- Governance: 1273262
+- StakingRewards: 1273263
+- SwapPools: 1273264-1273271 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
+- LiquidityPools: 1273272-1273279
+- $MOOD Token: 1274261
 
 > **Note**: Click on any contract link above to view the contract's basic information, global state, and associated transactions on AlgoExplorer Testnet.
 

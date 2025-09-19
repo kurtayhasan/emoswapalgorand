@@ -1,0 +1,19 @@
+[project]
+name = "emoswap"
+version = "1.0.0"
+description = "Emotion-Based DeFi Protocol on Algorand"
+
+[project.deploy]
+command = "python scripts/deploy_algokit.py"
+
+[environments.testnet]
+algod_url = "https://testnet-api.algonode.cloud"
+algod_token = ""
+indexer_url = "https://testnet-idx.algonode.cloud"
+indexer_token = ""
+
+[environments.mainnet]
+algod_url = "https://mainnet-api.algonode.cloud"
+algod_token = ""
+indexer_url = "https://mainnet-idx.algonode.cloud"
+indexer_token = ""
