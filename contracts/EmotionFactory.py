@@ -5,6 +5,11 @@ Manages emotion tokens (ASA) and daily minting functionality.
 
 from pyteal import *
 from beaker import *
+from beaker.lib.storage import BoxMapping
+
+# Import decorators
+external = Application.external
+create = Application.create
 
 # Global state keys
 ADMIN_KEY = Bytes("admin")
