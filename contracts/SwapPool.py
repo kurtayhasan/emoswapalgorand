@@ -6,6 +6,10 @@ Constant-product AMM (x*y=k) for emotion ASA <-> ALGO pairs
 from pyteal import *
 from beaker import *
 
+# Import decorators
+external = Application.external
+create = Application.create
+
 class SwapPoolState:
     asset_id = GlobalStateValue(
         stack_type=TealType.uint64,

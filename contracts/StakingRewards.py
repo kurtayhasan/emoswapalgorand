@@ -6,7 +6,10 @@ Manages staking of LP tokens to earn $MOOD governance token
 from typing import Final
 
 from beaker import *
-from beaker.lib.storage import Mapping
+
+# Import decorators
+external = Application.external
+create = Application.create
 from pyteal import (
     And, Assert, Bytes, Concat, Global, Gtxn, If, Int, Itob,
     Seq, Txn, TxnField, TxnType, InnerTxnBuilder, TealType

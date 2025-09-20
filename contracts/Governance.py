@@ -9,6 +9,10 @@ from pyteal import (
 )
 from beaker import *
 
+# Import decorators
+external = Application.external
+create = Application.create
+
 class GovernanceState:
     admin = GlobalStateValue(
         stack_type=TealType.bytes,
