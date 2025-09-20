@@ -1,25 +1,25 @@
 {
-  "emotion_factory_id": 6405585,
-  "governance_id": 6405586,
-  "staking_rewards_id": 6405587,
+  "emotion_factory_id": 1234568,
+  "governance_id": 1234569,
+  "staking_rewards_id": 1234570,
   "swap_pool_ids": {
-    "Happy": 6405588,
-    "Sad": 6405589,
-    "Angry": 6405590,
-    "Excited": 6405591,
-    "Calm": 6405592,
-    "Anxious": 6405593,
-    "Grateful": 6405594,
-    "Loved": 6405595
+    "Happy": 1234571,
+    "Sad": 1234572,
+    "Angry": 1234573,
+    "Excited": 1234574,
+    "Calm": 1234575,
+    "Anxious": 1234576,
+    "Grateful": 1234577,
+    "Loved": 1234578
   },
   "liquidity_pool_ids": {
-    "Happy": 6405596,
-    "Sad": 6405597,
-    "Angry": 6405598,
-    "Excited": 6405599,
-    "Calm": 6405600,
-    "Anxious": 6405601,
-    "Grateful": 6405602,
-    "Loved": 6405603
+    "Happy": 1234579,
+    "Sad": 1234580,
+    "Angry": 1234581,
+    "Excited": 1234582,
+    "Calm": 1234583,
+    "Anxious": 1234584,
+    "Grateful": 1234585,
+    "Loved": 1234586
   }
 }
