@@ -1,25 +1,11 @@
 {
-  "emotion_factory_id": 1234568,
-  "governance_id": 1234569,
-  "staking_rewards_id": 1234570,
-  "swap_pool_ids": {
-    "Happy": 1234571,
-    "Sad": 1234572,
-    "Angry": 1234573,
-    "Excited": 1234574,
-    "Calm": 1234575,
-    "Anxious": 1234576,
-    "Grateful": 1234577,
-    "Loved": 1234578
-  },
-  "liquidity_pool_ids": {
-    "Happy": 1234579,
-    "Sad": 1234580,
-    "Angry": 1234581,
-    "Excited": 1234582,
-    "Calm": 1234583,
-    "Anxious": 1234584,
-    "Grateful": 1234585,
-    "Loved": 1234586
-  }
+  "emotion_factory_id": 746159123,
+  "governance_id": 0,
+  "liquidity_pool_id": 0,
+  "staking_rewards_id": 0,
+  "swap_pool_id": 0,
+  "mood_token_id": 746157034,
+  "deployment_timestamp": "1758495221",
+  "network": "testnet",
+  "deployer_address": "EJR5A5GVWSWX27X4E54A5GSE6NOFAKR3S3LXHXETX5VOS3EDQCEAGTCKBY"
 }

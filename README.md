@@ -1,151 +1,159 @@
-# 🎭 EmoSwap - Emotion-Based DeFi Protocol
+# EmoSwap - Algorand Emotion Trading Platform
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Algorand](https://img.shields.io/badge/Algorand-Testnet-blue.svg)](https://testnet.algoexplorer.io/)
-[![Next.js](https://img.shields.io/badge/Next.js-15.5.3-black.svg)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
+EmoSwap, Algorand blockchain üzerinde duyguları tokenize eden ve ticaretini yapan yenilikçi bir DeFi platformudur.
 
-> **A revolutionary DeFi protocol that allows users to trade, stake, and govern based on emotional states using Algorand blockchain technology.**
+## 🎯 Proje Özeti
 
-## 🌟 Overview
+EmoSwap, kullanıcıların günlük duygularını tokenize edebileceği, bu tokenları takas edebileceği ve likidite sağlayarak ödül kazanabileceği bir platformdur.
 
-EmoSwap is a cutting-edge decentralized finance (DeFi) protocol built on the Algorand blockchain that introduces emotion-based trading and governance. Users can create, trade, and stake emotion tokens representing different emotional states, creating a unique and engaging DeFi experience.
+## 🏗️ Mimari
 
-## ✨ Key Features
-
-### 🎭 Emotion-Based Trading
-- **8 Core Emotions**: Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved
-- **Automated Market Maker (AMM)**: Constant-product formula (x*y=k) for fair pricing
-- **Low Slippage**: Optimized for small to medium trades
-- **Real-time Pricing**: Dynamic price discovery based on supply and demand
-
-### 💰 Liquidity Provision
-- **Liquidity Pools**: Provide liquidity for any emotion pair
-- **LP Tokens**: Receive liquidity provider tokens as proof of stake
-- **Fees**: Earn trading fees from pool activity
-- **Flexible Staking**: Add/remove liquidity anytime
-
-### 🏆 Staking Rewards
-- **$MOOD Token**: Governance token for protocol decisions
-- **Staking Pools**: Stake LP tokens to earn $MOOD rewards
-- **APY Rewards**: Competitive annual percentage yield
-- **Compound Staking**: Reinvest rewards for maximum returns
-
-### 🗳️ Governance
-- **Proposal System**: Create and vote on protocol changes
-- **$MOOD Voting**: Voting power based on $MOOD token holdings
-- **Transparent Process**: All proposals and votes are on-chain
-- **Community Driven**: Decentralized decision making
-
-## 🛠️ Technology Stack
-
-### Blockchain
-- **Algorand**: High-performance, carbon-negative blockchain
-- **PyTeal**: Smart contract development language
-- **Beaker**: Development framework for Algorand
+### Smart Contracts (TEAL v2)
+- **emotion_factory.teal**: Duygu tokenlarını oluşturur ve günlük mint işlemlerini yönetir
+- **governance.teal**: Protokol parametrelerini ve gelecekteki DAO yönetimini yönetir
+- **liquidity_pool.teal**: Duygu ASA <-> ALGO çiftleri için likidite sağlama
+- **staking_rewards.teal**: LP token stake ederek $MOOD governance token kazanma
+- **swap_pool.teal**: Duygu ASA <-> ALGO çiftleri için sabit çarpım AMM (x*y=k)
+- **clear.teal**: Tüm kontratlar için ortak clear program
 
 ### Frontend
-- **Next.js 15.5.3**: React framework with App Router
-- **TypeScript**: Type-safe development
-- **Tailwind CSS**: Utility-first CSS framework
-- **Pera Wallet**: Algorand wallet integration
+- **Next.js 15** ile modern React uygulaması
+- **Algorand Wallet** entegrasyonu
+- **Responsive** ve kullanıcı dostu arayüz
 
-### Development Tools
-- **AlgoSDK**: JavaScript SDK for Algorand
-- **AlgoKit**: Development toolkit
-- **GitHub Actions**: CI/CD pipeline
+## 🚀 Kurulum
 
-## 🚀 Getting Started
+### Gereksinimler
+- Node.js 18+
+- npm veya yarn
+- Algorand Wallet (Pera, MyAlgo, vs.)
 
-### Prerequisites
-- Node.js 18+ 
-- Python 3.8+
-- Algorand wallet (Pera Wallet recommended)
+### Kurulum Adımları
 
-### Installation
+1. **Repository'yi klonlayın**
+```bash
+git clone https://github.com/yourusername/emoswapalgo.git
+cd emoswapalgo
+```
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/kurtayhasan/emoswapalgorand.git
-   cd emoswapalgorand
-   ```
+2. **Bağımlılıkları yükleyin**
+```bash
+npm install
+cd web
+npm install
+```
 
-2. **Install dependencies**
-   ```bash
-   # Install Python dependencies
-   pip install -r requirements.txt
-   
-   # Install frontend dependencies
-   cd web
-   npm install
-   ```
+3. **Web uygulamasını başlatın**
+```bash
+cd web
+npm run dev
+```
 
-3. **Environment setup**
-   ```bash
-   # Copy environment template
-   cp env.example .env
-   
-   # Edit .env with your configuration
-   nano .env
-   ```
+4. **Tarayıcıda açın**
+```
+http://localhost:3000
+```
 
-4. **Start development server**
-   ```bash
-   # Start frontend
-   cd web
-   npm run dev
-   
-   # Open http://localhost:3000
-   ```
+## 📋 Deployment
 
-## 📊 Algorand Testnet Contracts
+### Algo Studio ile Deployment (Önerilen)
 
-**Algorand Testnet Contract Address (Application ID)**: 746064352  
-**AlgoExplorer Testnet**: [https://explorer.perawallet.app/](https://explorer.perawallet.app/)
+1. **Algo Studio'ya gidin**: https://studio.algorand.org/
+2. **Yeni proje oluşturun**
+3. **TEAL dosyalarını kopyalayın**:
+   - `contracts/emotion_factory.teal`
+   - `contracts/governance.teal`
+   - `contracts/liquidity_pool.teal`
+   - `contracts/staking_rewards.teal`
+   - `contracts/swap_pool.teal`
+   - `contracts/clear.teal`
+4. **TestNet'e deploy edin**
+5. **App ID'leri alın**
+6. **Konfigürasyonları güncelleyin**
 
-### Contract Links
-- **EmotionFactory**: [https://explorer.perawallet.app/application/746064352](https://explorer.perawallet.app/application/746064352)
-- **Governance**: [https://explorer.perawallet.app/application/746064353](https://explorer.perawallet.app/application/746064353)
-- **$MOOD Token**: [https://explorer.perawallet.app/asset/746065352](https://explorer.perawallet.app/asset/746065352)
+### Otomatik Deployment
 
-### All Contract IDs
-- EmotionFactory: 746064352
-- Governance: 746064353
-- StakingRewards: 746064354
-- SwapPools: 746064362-746064369 (Happy, Sad, Angry, Excited, Calm, Anxious, Grateful, Loved)
-- LiquidityPools: 746064372-746064379
-- $MOOD Token: 746065352
+```bash
+node scripts/deploy.js
+```
 
-> **Note**: Click on any contract link above to view the contract's basic information, global state, and associated transactions on AlgoExplorer Testnet.
+## 🔧 Konfigürasyon
 
-## 🤝 Contributing
+### Environment Variables
+```env
+NEXT_PUBLIC_ALGOD_SERVER=https://testnet-api.algonode.cloud
+NEXT_PUBLIC_ALGOD_PORT=
+NEXT_PUBLIC_ALGOD_TOKEN=
+```
 
-We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) for details.
+### Contract IDs
+```typescript
+// web/src/lib/config.ts
+export const CONFIG = {
+  EMOTION_FACTORY_ID: 746159123, // Deploy edildi
+  GOVERNANCE_ID: 0,              // Beklemede
+  STAKING_REWARDS_ID: 0,         // Beklemede
+  LIQUIDITY_POOL_ID: 0,          // Beklemede
+  SWAP_POOL_ID: 0,               // Beklemede
+  MOOD_TOKEN_ID: 746157034,      // Deploy edildi
+};
+```
 
-### Development Workflow
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests
-5. Submit a pull request
+## 📊 Mevcut Durum
 
-## 📄 License
+| Bileşen | Durum | Açıklama |
+|---------|-------|----------|
+| **$MOOD Token** | ✅ Deploy Edildi | ID: 746157034 |
+| **Web Arayüzü** | ✅ Çalışıyor | http://localhost:3000 |
+| **EmoSwap Ana Kontrat** | ✅ Deploy Edildi | ID: 746159123 |
+| **AlgoKit Yapısı** | ✅ Uygulandı | Modern Python kontratları |
+| **Konfigürasyonlar** | ✅ Güncellendi | App ID'ler eklendi |
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## 🎨 Özellikler
 
-## 🆘 Support
+### Desteklenen Duygular
+- 😊 Happy (Mutlu)
+- 😢 Sad (Üzgün)
+- 😠 Angry (Kızgın)
+- 🤩 Excited (Heyecanlı)
+- 😌 Calm (Sakin)
+- 😟 Anxious (Endişeli)
+- 🙏 Grateful (Minnettar)
+- ❤️ Loved (Sevilen)
 
-- **Documentation**: [Project Wiki](https://github.com/kurtayhasan/emoswapalgorand/wiki)
-- **Issues**: [GitHub Issues](https://github.com/kurtayhasan/emoswapalgorand/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/kurtayhasan/emoswapalgorand/discussions)
+### Trading Özellikleri
+- **Minimum Swap**: 0.001 ALGO
+- **Maksimum Slippage**: %5
+- **Swap Fee**: %0.3
 
-## 🙏 Acknowledgments
+### Staking Özellikleri
+- **Minimum Stake**: 1.0 LP Token
+- **Reward Rate**: %10
 
-- **Algorand Foundation** for the amazing blockchain platform
-- **Pera Wallet** for seamless wallet integration
-- **AlgoExplorer** for blockchain exploration tools
-- **Open source community** for inspiration and support
+## 🔗 Bağlantılar
+
+- **TestNet Explorer**: https://testnet.algoexplorer.io/
+- **$MOOD Token**: https://testnet.algoexplorer.io/asset/746157034
+- **EmoSwap Ana Kontrat**: https://testnet.algoexplorer.io/application/746159123
+- **Algo Studio**: https://studio.algorand.org/
+
+## 📝 Lisans
+
+MIT License
+
+## 🤝 Katkıda Bulunma
+
+1. Fork yapın
+2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
+3. Commit yapın (`git commit -m 'Add amazing feature'`)
+4. Push yapın (`git push origin feature/amazing-feature`)
+5. Pull Request oluşturun
+
+## 📞 İletişim
+
+- **GitHub**: [@yourusername](https://github.com/yourusername)
+- **Twitter**: [@emoswapalgo](https://twitter.com/emoswapalgo)
 
 ---
 
-**Built with ❤️ on Algorand**
+**Not**: Bu proje Algorand TestNet üzerinde çalışmaktadır. MainNet deployment için ek güvenlik testleri gereklidir.

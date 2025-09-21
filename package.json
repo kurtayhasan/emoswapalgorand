@@ -33,5 +33,8 @@
   "bugs": {
     "url": "https://github.com/kurtayhasan/emoswapalgorand/issues"
   },
-  "homepage": "https://github.com/kurtayhasan/emoswapalgorand#readme"
+  "homepage": "https://github.com/kurtayhasan/emoswapalgorand#readme",
+  "dependencies": {
+    "algosdk": "^3.5.0"
+  }
 }

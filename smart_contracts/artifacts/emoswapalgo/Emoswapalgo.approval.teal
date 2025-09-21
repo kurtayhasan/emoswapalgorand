@@ -1,0 +1,151 @@
+#pragma version 10
+#pragma typetrack false
+
+// algopy.arc4.ARC4Contract.approval_program() -> uint64:
+main:
+    intcblock 1
+    bytecblock 0x151f7c750000000000000000
+    // smart_contracts/emoswapalgo/contract.py:5
+    // class Emoswapalgo(ARC4Contract):
+    txn NumAppArgs
+    bz main_bare_routing@12
+    pushbytess 0x02bece11 0xf06bb318 0x98d401b8 0x8b70ec23 0x769bb17b 0xc718556e 0x6c8a862a // method "hello(string)string", method "get_mood_token_id()uint64", method "get_emotion_factory_id()uint64", method "get_governance_id()uint64", method "get_liquidity_pool_id()uint64", method "get_staking_rewards_id()uint64", method "get_swap_pool_id()uint64"
+    txna ApplicationArgs 0
+    match main_hello_route@3 main_get_mood_token_id_route@4 main_get_emotion_factory_id_route@5 main_get_governance_id_route@6 main_get_liquidity_pool_id_route@7 main_get_staking_rewards_id_route@8 main_get_swap_pool_id_route@9
+
+main_after_if_else@16:
+    // smart_contracts/emoswapalgo/contract.py:5
+    // class Emoswapalgo(ARC4Contract):
+    pushint 0 // 0
+    return
+
+main_get_swap_pool_id_route@9:
+    // smart_contracts/emoswapalgo/contract.py:35
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    bytec_0 // 0x151f7c750000000000000000
+    log
+    intc_0 // 1
+    return
+
+main_get_staking_rewards_id_route@8:
+    // smart_contracts/emoswapalgo/contract.py:30
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    bytec_0 // 0x151f7c750000000000000000
+    log
+    intc_0 // 1
+    return
+
+main_get_liquidity_pool_id_route@7:
+    // smart_contracts/emoswapalgo/contract.py:25
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    bytec_0 // 0x151f7c750000000000000000
+    log
+    intc_0 // 1
+    return
+
+main_get_governance_id_route@6:
+    // smart_contracts/emoswapalgo/contract.py:20
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    bytec_0 // 0x151f7c750000000000000000
+    log
+    intc_0 // 1
+    return
+
+main_get_emotion_factory_id_route@5:
+    // smart_contracts/emoswapalgo/contract.py:15
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    bytec_0 // 0x151f7c750000000000000000
+    log
+    intc_0 // 1
+    return
+
+main_get_mood_token_id_route@4:
+    // smart_contracts/emoswapalgo/contract.py:10
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    pushbytes 0x151f7c75000000002c7973ea
+    log
+    intc_0 // 1
+    return
+
+main_hello_route@3:
+    // smart_contracts/emoswapalgo/contract.py:6
+    // @abimethod()
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/emoswapalgo/contract.py:5
+    // class Emoswapalgo(ARC4Contract):
+    txna ApplicationArgs 1
+    extract 2 0
+    // smart_contracts/emoswapalgo/contract.py:6
+    // @abimethod()
+    callsub hello
+    dup
+    len
+    itob
+    extract 6 2
+    swap
+    concat
+    pushbytes 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_bare_routing@12:
+    // smart_contracts/emoswapalgo/contract.py:5
+    // class Emoswapalgo(ARC4Contract):
+    txn OnCompletion
+    bnz main_after_if_else@16
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    intc_0 // 1
+    return
+
+
+// smart_contracts.emoswapalgo.contract.Emoswapalgo.hello(name: bytes) -> bytes:
+hello:
+    // smart_contracts/emoswapalgo/contract.py:6-7
+    // @abimethod()
+    // def hello(self, name: String) -> String:
+    proto 1 1
+    // smart_contracts/emoswapalgo/contract.py:8
+    // return "Hello, " + name
+    pushbytes "Hello, "
+    frame_dig -1
+    concat
+    retsub

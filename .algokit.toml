@@ -1,19 +1,10 @@
+[algokit]
+min_version = "v1.12.1"
+
 [project]
-name = "emoswap"
-version = "1.0.0"
-description = "Emotion-Based DeFi Protocol on Algorand"
+type = 'workspace'
+projects_root_path = 'projects'
 
-[project.deploy]
-command = "python scripts/deploy_algokit.py"
-
-[environments.testnet]
-algod_url = "https://testnet-api.algonode.cloud"
-algod_token = ""
-indexer_url = "https://testnet-idx.algonode.cloud"
-indexer_token = ""
-
-[environments.mainnet]
-algod_url = "https://mainnet-api.algonode.cloud"
-algod_token = ""
-indexer_url = "https://mainnet-idx.algonode.cloud"
-indexer_token = ""
+[generate.devcontainer]
+description = "Generate a default 'devcontainer.json' configuration that pre-installs algokit and launches Algorand sandbox as part of codespace container provisioning."
+path = ".algokit/generators/create-devcontainer"
